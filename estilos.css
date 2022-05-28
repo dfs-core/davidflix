@@ -1,0 +1,119 @@
+:root{
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* con estoy los margenes y pading van incluídos en las medias de width y he*/
+}
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+    /* display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline; */
+}
+
+header{
+    padding: 30px 0;
+    background: rgba(0,0,0,1);
+}
+
+header .menuPrincipal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid #141414;
+}
+
+/* header .menuPrincipal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+/* header .menuUsuario{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+     border: solid #141414;
+} */
+
+header .logotipo{
+    color: var(--rojo);
+}
+
+header nav input{
+    background: rgba(0,0,0,1);
+    border: none;
+    width: auto;
+    color: #fff;
+}
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+header nav a:hover,
+header nav a.activo{
+    color: #fff;
+}
+
+
+/* --------------------- Contenedores de secciones -------------------*/
+
+.contenedor h2{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.contenedor .contenedor-principal{
+    margin-top: 20px;
+}
+
+.contenedor .contenedor-principal .contenedor-carousel {
+   /* width: 100%;
+   overflow: hidden; */
+}
+.contenedor .contenedor-principal .contenedor-carousel .carousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.contenedor .contenedor-principal .contenedor-carousel .carousel .pelicula{
+    min-width: 16%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+.contenedor .contenedor-principal .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.contenedor .contenedor-principal .contenedor-carousel .carousel .pelicula:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+/* -------------------- Media queries ----------------------------------*/
+@media screen and (max-width: 800px){
+  header .menuPrincipal{
+   flex-direction: column;
+   text-align: center;
+
+  }
+  header nav a{
+    color: #E50914;
+ }
+ header nav {
+    color: #E50914;
+ }
+}
